@@ -97,12 +97,5 @@ namespace MovieDatabase
         }
     }
 
-    public enum MovieType
-    {
-        Horror,
-        Animated,
-        Drama,
-        SciFi,
-    }
 }
 

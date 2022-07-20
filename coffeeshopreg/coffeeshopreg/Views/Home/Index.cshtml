@@ -1,0 +1,23 @@
+﻿@model coffeeshopreg.Products[]
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Coffee Shop Registration</h1>
+    <p>To register for this shop <br /><br /><br />Click <a href="/Home/Registration">HERE</a>.</p>
+</div>
+
+
+<div>
+    <hr />
+    <p>List of Product Below</p>
+    <br/>
+    	@{
+		    foreach(var curr in Model)
+		    {
+                    <a href="Home/Details?id=@curr.Id">@curr.Name</a><br />
+		    }
+	    }
+</div>

@@ -1,0 +1,49 @@
+/* _content/coffeeshopreg/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-dqzeii5hhl] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-dqzeii5hhl] {
+  color: #0077cc;
+}
+
+.btn-primary[b-dqzeii5hhl] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-dqzeii5hhl], .nav-pills .show > .nav-link[b-dqzeii5hhl] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-dqzeii5hhl] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-dqzeii5hhl] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-dqzeii5hhl] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-dqzeii5hhl] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-dqzeii5hhl] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

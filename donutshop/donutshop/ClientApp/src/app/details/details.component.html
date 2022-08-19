@@ -1,0 +1,8 @@
+<h1>Donut Details</h1>
+
+
+<h3>Name: {{loadedDetails.name}}</h3>
+<h3>Calories: {{loadedDetails.calories}}</h3>
+<h3 *ngFor="let currentString of loadedDetails.extras">Extras: {{currentString}}</h3>
+<p><img src="{{loadedDetails.photo}}" /></p>
+<h3>Photo Attribution:  {{loadedDetails.photo_attribution}}</h3>

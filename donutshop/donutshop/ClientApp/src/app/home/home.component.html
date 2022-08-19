@@ -1,0 +1,16 @@
+<h1>Hello, world!</h1>
+
+<br />
+<br />
+<button class="btn btn-primary" (click)="GetDonutList()">Get DonutList</button>
+<br />
+<br />
+<h2 *ngIf="loadedDonuts.count != 0 ">DataReceived {{loadedDonuts.count}} donuts</h2>
+        <app-display-donut *ngFor="let currLoadedDonut of loadedDonuts.results"
+                           [name]=currLoadedDonut.name
+                           [id]="currLoadedDonut.id"
+                           [photo]="currLoadedDonut.photo"
+                           [photo_attribution]="currLoadedDonut.photo_attribution">
+        </app-display-donut>
+
+

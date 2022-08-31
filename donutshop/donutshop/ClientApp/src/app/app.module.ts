@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { DisplayDonutComponent } from './display-donut/display-donut.component';
 import { DetailsComponent } from './details/details.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DetailsComponent } from './details/details.component';
     FetchDataComponent,
     DisplayDonutComponent,
     DetailsComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -31,6 +33,7 @@ import { DetailsComponent } from './details/details.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'details/:id', component: DetailsComponent },
+      { path: 'cart', component: CartComponent},
     ])
   ],
   providers: [],

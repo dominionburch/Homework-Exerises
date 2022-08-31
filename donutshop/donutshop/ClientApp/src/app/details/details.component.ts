@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Details, DonutService } from '../donut.service';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-details',
@@ -9,7 +10,8 @@ import { Details, DonutService } from '../donut.service';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor(private _Activatedroute: ActivatedRoute, private donutService: DonutService) {
+  constructor(private _Activatedroute: ActivatedRoute, private donutService: DonutService, private cartService: CartService)
+  {
     
   }
 
@@ -33,6 +35,11 @@ export class DetailsComponent implements OnInit {
       this.isNewDetailsAvailableEventSubscribed = true;
     }
     this.donutService.GetDonutDetails(this.id);
+  }
+
+  public addToCart(details: Details) {
+    this.cartService.addToCart(details);
+    window.alert('Your selection has been added to the cart!  Numbers: ' + this.cartService.items.length.toString())
   }
 
 }

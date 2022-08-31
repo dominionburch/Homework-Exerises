@@ -4,36 +4,77 @@ import { Component } from '@angular/core';
   selector: 'app-counter-component',
   templateUrl: './counter.component.html'
 })
-export class CounterComponent {
+
+export class CounterComponent
+{
   public currentCount = 0;
-  public emptyCountries: ExampleCounty[] = [];
-  public theCountries: ExampleCounty[] = [
-    { value: 5, someString: "America", theColor: "blue" },
-    { value: 5, someString: "Canada", theColor: "grey" },
-    { value: 5, someString: "Lithuania", theColor: "purple" }
-  ];
-
-  public countryNames: any = ['American', 'Canada', 'Denmark'];
-
-
-  constructor() {
-    this.countryNames = this.theCountries;
+  
+  constructor()
+  {
+    //this.countryNames = this.theCountries;
   }
 
-  public incrementCounter() {
+  
+  public countries: Country[] =
+  [
+    { name: "Egypt", language: "Arabic", colors: "red" },
+    { name: "Mexico", language: "Spanish", colors: "green" },
+    { name: "Brazil", language: "Portugese", colors: "blue" },
+    { name: "Italy", language: "Italian", colors: "purple" },
+    { name: "Netherlands", language: "Dutch", colors: "yellow" },
+    { name: "Japan", language: "Japanese", colors: "crimson" },
+    { name: "China", language: "Mandarin or Cantonese", colors: "orange" },
+    { name: "America", language: "English", colors: "blue" },
+  ]
+
+  public incrementCounter()
+  {
     this.currentCount++;
   }
 
-  public SomeDecision(): boolean {
+  public SomeDecision(): boolean
+  {
     if ((this.currentCount % 2) == 0)
       return true;
     else
       return false;
   }
+
+  public OnClickedChangeCountry(): void
+  {
+    let countryFromUser: string | null = '';
+    countryFromUser = prompt('Please enter the name of a country');
+    let foundCountry: Country = new Country;
+    for (let currCountry = 0; currCountry < this.countries.length; currCountry++)
+    {
+      if (countryFromUser == this.countries[currCountry].name)
+      {
+        foundCountry = this.countries[currCountry];
+        break;
+      }
+    }
+
+    let foundCountryName = document.getElementById("CountryName");
+    foundCountryName!.innerText = foundCountry?.name;
+
+    let foundCountryLanguage = document.getElementById("CountryOfficialLanguage");
+    foundCountryLanguage!.innerText = foundCountry?.language;
+
+    let newColorString = "color: " + foundCountry?.colors;
+    foundCountryName!.setAttribute("style", newColorString);
+
+    foundCountryLanguage!.setAttribute("style", newColorString);
+
+  }
 }
 
-export class ExampleCounty {
-  public value: number = 0;
-  public someString: string = "";
-  public theColor: string = "";
+
+
+
+
+export class Country
+{
+  public name: string = "";
+  public language: string = "";
+  public colors: string = "";
 }

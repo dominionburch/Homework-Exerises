@@ -4,8 +4,11 @@
 
 <p aria-live="polite">Current count: <strong>{{ currentCount }}</strong></p>
 
-<p *ngFor ="let currCountry of theCountries" style="color:{{currCountry.theColor}}; font-weight:bold">{{currCountry.someString}}</p>
-
 <p *ngIf="SomeDecision()">This element was shown</p>
 
-<button class="btn btn-primary" (click)="incrementCounter()">Increment</button>
+<button class="btn btn-secondary" (click)="incrementCounter()">Increment</button>
+
+<button class="btn btn-primary" (click)="OnClickedChangeCountry()">Change Country</button>
+
+<p id="CountryName">Country Name</p>
+<p id="CountryOfficialLanguage">Official Language</p>

@@ -28,6 +28,7 @@ export class CartComponent implements OnInit {
         items.splice(i, 1);
         window.alert('Your donut has been removed from the cart!' + i.toString());
         console.log("Idx: " + i.toString());
+        break;
       }
     }
   }

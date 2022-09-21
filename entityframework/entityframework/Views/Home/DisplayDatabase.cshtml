@@ -1,0 +1,28 @@
+﻿@model entityframework.Products[]
+
+
+<p>This is the product list page. There are @Model.Length products in the database.</p>
+
+
+<table>
+    <tr>
+        <th style="color:goldenrod">Name</th>
+        <th style="color:goldenrod">Descrition</th>
+        <th style="color:goldenrod">Price</th>
+    </tr>
+    @{
+        foreach (var products in @Model)
+        {
+                <tr>
+                    <td><a href="ProductDetails?Id=@products.Id">@products.Name</a></td>
+                    <td>@products.Description</td>
+                    <td>@products.Price</td>
+                </tr>
+        }
+    }
+</table>
+
+<br/>
+<br/>
+
+<a href="CreateNewProduct">Create a New Product</a>

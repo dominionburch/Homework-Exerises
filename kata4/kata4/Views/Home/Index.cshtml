@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!--
+5.  Modify Index HTML
+	a.  For each user in userList
+	b.  Create an A link
+		Where href="/Home/UserEditor?id=<that user's ID>"
+		Body of A tag is FirstName + " " + LastName
+-->
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<div>
+	@{
+		foreach(var curr in Program.userList)
+		{
+			<a href="Home/UserEditor?id=@curr.Id">@(curr.Firstname + " " + curr.Lastname)</a><br />
+		}
+	}
+
+</div>

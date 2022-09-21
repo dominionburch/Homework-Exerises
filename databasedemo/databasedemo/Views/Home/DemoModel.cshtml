@@ -1,0 +1,14 @@
+﻿@model databasedemo.Models.DemoModel
+
+@{
+    ViewData["Title"] = "DemoModel";
+}
+<h1>DemoModel</h1>
+<p>Here's the data from the database:'</p>
+@{
+    foreach (var currEmployee in Model.EmployeeNames)
+    {
+        <p>Employee @currEmployee</p>
+    }
+    <p>And the number of company records is @Model.noCompanyRecords</p>
+}

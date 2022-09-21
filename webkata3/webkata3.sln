@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webkata3", "webkata3\webkata3.csproj", "{F37DEAEA-03FE-4650-9AAC-F2B78D15CAEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F37DEAEA-03FE-4650-9AAC-F2B78D15CAEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F37DEAEA-03FE-4650-9AAC-F2B78D15CAEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F37DEAEA-03FE-4650-9AAC-F2B78D15CAEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F37DEAEA-03FE-4650-9AAC-F2B78D15CAEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6723EF75-55B0-4CBA-8B74-735033AB4A9D}
+	EndGlobalSection
+EndGlobal

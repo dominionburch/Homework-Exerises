@@ -1,0 +1,10 @@
+<h2>Product List</h2>
+
+<br/>
+<br />
+
+<ul>
+  <li *ngFor="let currProduct of theProducts">{{currProduct.name}} ({{currProduct.productID}}) costs {{currProduct.price | currency}}</li>
+</ul>
+<br/>
+<p>There are {{theProducts.length}} products</p>

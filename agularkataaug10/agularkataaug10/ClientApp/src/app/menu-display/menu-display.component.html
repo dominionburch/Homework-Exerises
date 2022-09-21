@@ -1,0 +1,20 @@
+<p>menu-display works!</p>
+
+
+<table>
+  <tbody>
+    <tr>
+      <!--  public name: string = "";
+            public price: number = 0;
+            public foodCategory: string = "";-->
+      <td style="min-width:100px; font-weight: bold">Name</td>
+      <td style="min-width: 50px; font-weight: bold">Price</td>
+      <td style="min-width: 50px; font-weight: bold">Category</td>
+    </tr>
+    <tr *ngFor="let currMenuItem of myMenuItems">
+      <td style="min-width: 100px">{{currMenuItem.name}}</td>
+      <td style="min-width: 50px">{{currMenuItem.price | currency}}</td>
+      <td style="min-width: 50px">{{currMenuItem.foodCategory | uppercase}}</td>
+    </tr>
+  </tbody>
+</table>

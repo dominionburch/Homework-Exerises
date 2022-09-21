@@ -1,0 +1,39 @@
+<p>menu-display works!</p>
+
+<br />
+<br />
+<br />
+
+<table>
+  <tbody>
+    <tr>
+      <td style="color:blue; min-width:100px; font-weight:bold">Name</td>
+      <td style="color: blue; min-width: 100px; font-weight: bold">Category</td>
+      <td style="color: blue; min-width: 100px; font-weight: bold">Price</td>
+    </tr>
+    <tr *ngFor="let currItem of theMenuItems">
+      <td style="color: darkred; min-width:100px">{{currItem.name}}</td>
+      <td style="color: darkred; min-width:100px">{{currItem.category}}</td>
+      <td style="color: darkgreen; min-width:100px">{{currItem.price | currency}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+<br />
+<br />
+
+<table>
+  <tbody>
+    <tr>
+      <td style="color:purple; min-width:100px; font-weight:bold">First Name</td>
+      <td style="color: purple; min-width: 100px; font-weight: bold">Last Name</td>
+      <td style="color: purple; min-width: 100px; font-weight: bold">Email</td>
+    </tr>
+    <tr *ngFor="let currCust of customer">
+      <td>{{currCust.first_name}}</td>
+      <td>{{currCust.last_name}}</td>
+      <td>{{currCust.email}}</td>
+    </tr>
+  </tbody>
+</table>
